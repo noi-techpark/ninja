@@ -24,4 +24,4 @@ COPY src /code/src
 COPY pom.xml /code/pom.xml
 RUN mvn -B -U -DskipTests install
 
-CMD [ "mvn", "spring-boot:run" ]
+CMD mvn spring-boot:run -Drun.jvmArguments=$_JAVA_OPTIONS
